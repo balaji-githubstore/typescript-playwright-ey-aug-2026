@@ -107,5 +107,24 @@ else{
 }
 
 
-// tuples
 // union
+let policyNumber:number | string 
+policyNumber=10454545
+policyNumber="A29348934"
+
+// tuple
+/*
+tuple 
+- fixed number of elements 
+- each position has a specific type 
+- order must be followed 
+*/
+let e:[number,string] = [10,"king"]
+
+// print king 
+console.log(e[1])
+
+let radius:number=10
+
+
+let result1:number=3.14*radius*radius
