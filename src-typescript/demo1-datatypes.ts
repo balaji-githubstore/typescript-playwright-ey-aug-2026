@@ -80,7 +80,7 @@ let browserDetails2: { name: string, version: number, isMobile?: boolean } = { n
 let employee: { empId: number, empName: string, empSalary?: number }
 
 
-employee = { empId: 101, empName: "john"}
+employee = { empId: 101, empName: "john" }
 
 console.log(employee.empId)
 
@@ -92,25 +92,23 @@ else {
 }
 
 
-let num3:number=8
+let num3: number = 8
 
-if(num3<0)
-{
-    console.log("Negative: "+num3)
+if (num3 < 0) {
+    console.log("Negative: " + num3)
 }
-else if(num3==0)
-{
+else if (num3 == 0) {
     console.log("It's zero")
 }
-else{
-    console.log("Positive: "+num3)
+else {
+    console.log("Positive: " + num3)
 }
 
 
 // union
-let policyNumber:number | string 
-policyNumber=10454545
-policyNumber="A29348934"
+let policyNumber: number | string
+policyNumber = 10454545
+policyNumber = "A29348934"
 
 // tuple
 /*
@@ -119,12 +117,30 @@ tuple
 - each position has a specific type 
 - order must be followed 
 */
-let e:[number,string] = [10,"king"]
+let e: [number, string] = [10, "king"]
 
 // print king 
 console.log(e[1])
 
-let radius:number=10
+let radius: number = 10
 
 
-let result1:number=3.14*radius*radius
+let result1: number = 3.14 * radius * radius
+
+
+
+//type check is mandatory before using it
+let num5: unknown 
+
+if (typeof num5 == "undefined") {
+
+}
+else {
+    console.log((num5 as number)+ (num5 as number))
+}
+
+
+// if(typeof num5 != "undefined")
+// {
+//     console.log((num5 as number)+ (num5 as number))
+// }
