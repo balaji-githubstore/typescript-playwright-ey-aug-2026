@@ -20,7 +20,6 @@ console.log(Demo1Var.bS)
 let obj1=new Demo1Var()
 let obj2=new Demo1Var()
 
-
 obj1.aNS=1000
 
 console.log(obj1.aNS)
