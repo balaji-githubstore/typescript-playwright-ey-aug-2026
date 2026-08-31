@@ -83,5 +83,11 @@ export class Employee {
 let emp1 = new Employee(101, "John", 8000, "Good");
 let emp2 = new Employee(101, "John", 8000, "not bad");
 
+//call set 
+emp1.salary=1002323
 
+//call get
+console.log(emp1.salary)
+
+//call method
 emp1.displayEmployeeRecord();
