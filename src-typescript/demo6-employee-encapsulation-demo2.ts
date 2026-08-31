@@ -65,10 +65,10 @@ export class Employee {
     }
 
     public set performance(value: string) {
-        if (value && value.trim().length > 0) {
+        if (value.toLowerCase() == "good" || value.toLowerCase() == "average" || value.toLowerCase() == "bad") {
             this._performance = value;
         } else {
-            console.log("Performance should not be empty")
+            console.log("Performance should not be empty. It should be either good or bad or average!!!")
         }
     }
 
@@ -81,6 +81,7 @@ export class Employee {
 
 
 let emp1 = new Employee(101, "John", 8000, "Good");
+let emp2 = new Employee(101, "John", 8000, "not bad");
 
 
 emp1.displayEmployeeRecord();
