@@ -21,6 +21,11 @@ export class Employee {
         console.log("Company Name: " + Employee.companyName)
         console.log("---------------------------------------------------------")
     }
+
+    public static printCompanyName(): void
+    {
+        console.log(Employee.companyName)
+    }
 }
 
 
@@ -32,7 +37,7 @@ let emp3: Employee = new Employee(103, "Saul", 4000, "Bad")
 
 
 emp2.displayEmployeeRecord();
-
 emp1.displayEmployeeRecord();
-
 emp3.displayEmployeeRecord();
+
+Employee.printCompanyName();
