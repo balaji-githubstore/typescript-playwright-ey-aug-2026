@@ -1,3 +1,5 @@
+// Demo1Var - user defined datatype 
+import {areaOfCircle} from "./demo2-methods.js"
 class Demo1Var 
 {
     //static variable or class variable 
@@ -17,7 +19,7 @@ Demo1Var.aS=2000
 console.log(Demo1Var.aS)
 console.log(Demo1Var.bS)
 
-let obj1=new Demo1Var()
+let obj1:Demo1Var=new Demo1Var()
 let obj2=new Demo1Var()
 
 obj1.aNS=1000
@@ -27,3 +29,6 @@ console.log(obj1.bNS)
 
 console.log(obj2.aNS)
 console.log(obj2.bNS)
+
+
+console.log(areaOfCircle(2))

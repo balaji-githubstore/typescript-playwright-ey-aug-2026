@@ -42,6 +42,7 @@ console.log(items[2])
 
 
 // object datatype
+//day 4 -task 3
 let browserDetails: { name: string, version: number, isMobile: boolean } = { name: "chrome", version: 9.0, isMobile: true }
 
 let browserDetails1: { name: string, version: number, isMobile?: boolean }
@@ -144,3 +145,7 @@ else {
 // {
 //     console.log((num5 as number)+ (num5 as number))
 // }
+
+
+browserDetails={name:"",version:0,isMobile:true}
+
