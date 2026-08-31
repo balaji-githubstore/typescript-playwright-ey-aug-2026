@@ -1,7 +1,7 @@
 export class Employee {
     private _id: number;
     public name: string;
-    private _salary: number;
+    private _salary!: number;
     public performance: string;
     public static companyName: string;
 
@@ -16,7 +16,7 @@ export class Employee {
         }
 
         this.name = name;
-        this._salary = salary;
+        
         this.performance = performance;
     }
 

@@ -22,6 +22,7 @@ export class Employee {
         console.log("---------------------------------------------------------")
     }
 
+    //static method
     public static printCompanyName(): void
     {
         console.log(Employee.companyName)
