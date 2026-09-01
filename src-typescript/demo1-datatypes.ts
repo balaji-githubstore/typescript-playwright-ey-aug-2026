@@ -149,3 +149,16 @@ else {
 
 browserDetails={name:"",version:0,isMobile:true}
 
+
+
+let items1: number[] = [10, 20, 30, 40.5, 88,45]
+
+for(let i=0;i<items1.length;i++)
+{
+    console.log(items1[i])
+}
+
+for(let item of items1)
+{
+    console.log(item)
+}
