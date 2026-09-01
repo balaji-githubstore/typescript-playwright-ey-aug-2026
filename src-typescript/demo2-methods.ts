@@ -69,3 +69,10 @@ function demo(browserDetails2: DemoOption)
 
 
 demo({name:"jack",version:4,isMobile:true})
+
+function demo2(policyNumber: number | string)
+{
+
+}
+
+demo2("33")
