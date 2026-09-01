@@ -3,6 +3,7 @@ export class Employee {
     private _name!: string;
     private _salary!: number;
     private _performance!: string;
+   
     public static companyName: string;
 
 
