@@ -22,7 +22,6 @@ class Employee {
         console.log("---------------------------------------------------------")
     }
 
-
     public static printEmployeeRecord(x: Employee): void {
         console.log("Employee Id: " + x.id)
         console.log("Employee Name: " + x.name)
@@ -56,7 +55,5 @@ Employee.printEmployeeRecord(emp1);
 Employee.printEmployeeRecord(emp3);
 
 let emp4: Employee = Employee.getEmployeeInstance()
-
 emp4.displayEmployeeRecord()
 
-// will start at 11:45 AM IST

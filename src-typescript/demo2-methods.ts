@@ -58,5 +58,14 @@ console.log(output)
 
 //create areaOfTriangle method with named parameter
 
+interface DemoOption
+{ name: string, version: number, isMobile?: boolean }
 
 
+function demo(browserDetails2: DemoOption)
+{
+
+}
+
+
+demo({name:"jack",version:4,isMobile:true})
