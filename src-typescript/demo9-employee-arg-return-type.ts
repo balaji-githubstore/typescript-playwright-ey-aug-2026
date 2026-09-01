@@ -1,4 +1,4 @@
-export class Employee {
+class Employee {
     public id: number;
     public name: string;
     public salary: number;
@@ -32,6 +32,10 @@ export class Employee {
         console.log("---------------------------------------------------------")
     }
 
+    public static getEmployeeInstance(): Employee {
+        let emp = new Employee(0, "", 0, "");
+        return emp;
+    }
 
 }
 
@@ -50,3 +54,7 @@ emp3.displayEmployeeRecord();
 Employee.printEmployeeRecord(emp2);
 Employee.printEmployeeRecord(emp1);
 Employee.printEmployeeRecord(emp3);
+
+let emp4:Employee=Employee.getEmployeeInstance()
+
+emp4.displayEmployeeRecord()
