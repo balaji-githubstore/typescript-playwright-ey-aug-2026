@@ -87,6 +87,9 @@ let emp2 = new Employee(101, "John", 8000, "not bad");
 //call set 
 emp1.salary=1002323
 
+emp1.id=50
+console.log(emp1.id)
+
 //call get
 console.log(emp1.salary)
 

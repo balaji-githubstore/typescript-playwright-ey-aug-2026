@@ -36,6 +36,7 @@ let emp1 = new Employee(-101, "John", 8000, "Good")
 let emp2 = new Employee(102, "Kim", 9000, "Average")
 let emp3: Employee = new Employee(103, "Saul", 4000, "Bad")
 
+emp1.id=-888
 
 emp2.displayEmployeeRecord();
 emp1.displayEmployeeRecord();
