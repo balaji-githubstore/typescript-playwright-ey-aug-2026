@@ -1,0 +1,31 @@
+XPath - XML Path Language
+
+Absolute XPath (not recommended) - /html/body/div[1]/div/div/section[1]/div/div/div[2]/div/form/fieldset/div[1]/div/input
+
+Relative XPath - 
+//tagname[@attribute='']
+//tagname[text()='']
+
+normalize-space() - check text by removing whitespace before & after text 
+//tagname[normalize-space()='']
+
+
+Contains
+//tagname[contains(@attribute,'')]
+//tagname[contains(text(),'')]
+
+
+
+Example: verify in chrome - ctrl+f
+//input[@id='Form_getForm_FullName']
+//input[@id='Form_getForm_Email']
+
+//select[@id='Form_getForm_Country']
+//button[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']
+
+
+//button[text()='Allow all']
+//button[normalize-space()='Accept All']
+//input[@placeholder='First Name*']
+
+//input[contains(@placeholder,'First Name')]
