@@ -10,7 +10,7 @@ function areaOfRectangle(length: number, width: number): number {
 function areaOfTriangle(base: number, height: number): number {
     return (base * height) / 2;
 }
-function areaOfSquare(side: number) {
+export function areaOfSquare(side: number) {
     return side * side;
 }
 
@@ -62,7 +62,7 @@ interface DemoOption
 { name: string, version: number, isMobile?: boolean }
 
 
-function demo(browserDetails2: DemoOption)
+function demo(a: DemoOption)
 {
 
 }

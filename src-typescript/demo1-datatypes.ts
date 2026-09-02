@@ -131,13 +131,13 @@ let result1: number = 3.14 * radius * radius
 
 
 //type check is mandatory before using it
-let num5: unknown 
+let num5: unknown
 
 if (typeof num5 == "undefined") {
 
 }
 else {
-    console.log((num5 as number)+ (num5 as number))
+    console.log((num5 as number) + (num5 as number))
 }
 
 
@@ -147,18 +147,26 @@ else {
 // }
 
 
-browserDetails={name:"",version:0,isMobile:true}
+browserDetails = { name: "", version: 0, isMobile: true }
 
 
 
-let items1: number[] = [10, 20, 30, 40.5, 88,45]
+let items1: number[] = [10, 20, 30, 40.5, 88, 45]
 
-for(let i=0;i<items1.length;i++)
-{
+for (let i = 0; i < items1.length; i++) {
     console.log(items1[i])
 }
 
-for(let item of items1)
-{
+for (let item of items1) {
     console.log(item)
 }
+
+let colors: string[] = ["red", "yellow", "green","blue"]
+
+console.log(colors[0])
+
+for(let color of colors)
+{
+    console.log(color)
+}
+
