@@ -23,9 +23,34 @@ Example: verify in chrome - ctrl+f
 //select[@id='Form_getForm_Country']
 //button[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']
 
-
 //button[text()='Allow all']
 //button[normalize-space()='Accept All']
 //input[@placeholder='First Name*']
 
 //input[contains(@placeholder,'First Name')]
+
+//img[@alt='hide-password']
+//img[contains(@src,'hide-password.svg')]
+
+
+//div[contains(text(),'valid username')]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+page.locator --> {
+
+<div tabindex="0" ng-if="isPasswordWrong" class="alert alert-danger errorTxt m-0 m-t-10 p-0">Please enter valid username and password</div>
+
+}
