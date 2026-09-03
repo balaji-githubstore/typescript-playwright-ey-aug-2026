@@ -59,7 +59,11 @@ console.log(output)
 //create areaOfTriangle method with named parameter
 
 interface DemoOption
-{ name: string, version: number, isMobile?: boolean }
+{ 
+    name: string, 
+    version: number, 
+    isMobile?: boolean 
+}
 
 
 function demo(a: DemoOption)
@@ -76,3 +80,11 @@ function demo2(policyNumber: number | string)
 }
 
 demo2("33")
+
+function demo3(options:{id:number,name:string},authorName:string)
+{
+    console.log(options.id)
+    console.log(options.name)
+}
+
+demo3({id:1,name:"jack"},"bala")
