@@ -10,7 +10,5 @@ await page.locator("css=#authUser").fill("john")
 await page.locator("css=#clearPass").fill("john123")
 await page.locator("css=select[name='languageChoice']").selectOption({label:"English (Indian)"})
 
-
-
 await page.waitForTimeout(5000);
 await browser.close();
