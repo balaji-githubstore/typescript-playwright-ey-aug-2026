@@ -8,7 +8,7 @@ await page.goto("https://opensource-demo.orangehrmlive.com/");
 
 
 //Start waiting for new page (tab) before clicking. Note no await.
-const promisePage=page.waitForEvent("filechooser");
+const promisePage=page.waitForEvent("popup");
 
 //click on element that opens a new tab
 await page.locator("xpath=//a[text()='OrangeHRM, Inc']").click();
