@@ -2,7 +2,7 @@ import { chromium } from "playwright"
 
 //using playwright instance - getting Browser instance 
 let browser=await chromium.launch({channel:"chrome",headless:false})
-
+let browserEdge=await chromium.launch({channel:"msedge",headless:false})
 // getting BrowserContext instance 
 let context=await browser.newContext()
 
@@ -19,7 +19,7 @@ await page1.goto("https://facebook.com")
 let actualTitle:string= await page.title()
 console.log(actualTitle)
 
-
+//page3 --> tab 3
 let page2 = await context.newPage()
 
 await page.waitForTimeout(5000)
