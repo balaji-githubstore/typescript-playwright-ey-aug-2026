@@ -11,7 +11,8 @@ await page.goto("https://www.nasscom.in/nasscom-membership");
 page.on("dialog",async dialog=>{
      let actualAlertMessage= dialog.message();
      console.log(actualAlertMessage);
-     await dialog.accept();
+     console.log(dialog.type())
+     await dialog.dismiss();
 })
 
 // click on Calculate fee 
