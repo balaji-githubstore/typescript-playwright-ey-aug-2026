@@ -15,6 +15,16 @@ Contains
 //tagname[contains(text(),'')]
 
 
+Grouping of XPath - starts at 1
+(//input[@type='file'])[2]
+
+
+Upload 
+//input[@type='file']
+
+And-or 
+//input[@type='file' and @id='edit-field-audited-balance-sheet-for-0-upload']
+
 
 Example: verify in chrome - ctrl+f
 //input[@id='Form_getForm_FullName']
@@ -34,6 +44,29 @@ Example: verify in chrome - ctrl+f
 
 
 //div[contains(text(),'valid username')]
+
+
+//a[text()='Calculate Fee']
+
+------------------------------------------------------
+CSS Selector 
+
+#id 
+.classname
+tagname[attribute='']
+[attribute='']
+
+
+Example: verify in chrome - ctrl+f
+#authUser
+select[name='languageChoice']
+
+
+
+input[name='firstName']
+
+
+
 
 
 

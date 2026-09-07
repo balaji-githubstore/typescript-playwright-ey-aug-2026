@@ -17,8 +17,8 @@ const fileChooser= await promiseFileChooser
 await fileChooser.setFiles("D:\\Mine\\Balaji Dinakaran Trainer Profile AI 2026.pdf")
 
 
-const [fileChooser1,]= await Promise.all([page.waitForEvent("filechooser"),page.locator("xpath=//span[text()='Select PDF file']").click()]);
-await fileChooser1.setFiles("D:\\Mine\\Balaji Dinakaran Trainer Profile AI 2026.pdf")
+// const [fileChooser1,]= await Promise.all([page.waitForEvent("filechooser"),page.locator("xpath=//span[text()='Select PDF file']").click()]);
+// await fileChooser1.setFiles("D:\\Mine\\Balaji Dinakaran Trainer Profile AI 2026.pdf")
 
 
 await page.waitForTimeout(5000);

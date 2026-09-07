@@ -1,40 +1,63 @@
-import {chromium, type Browser} from "playwright"
-let browser:Browser = await chromium.launch({channel:"chrome",headless:false})
-let context = await browser.newContext()
-let page =await context.newPage()
+//task 1:
+import { chromium } from "playwright";
+ 
+const browser = await chromium.launch({channel: "chrome", headless: false});
 
-await page.goto("http://demo.openemr.io/b/openemr/");
-await page.locator("xpath=//input[@placeholder='Username']").fill("admin")
-await page.locator("xpath=//input[@placeholder='Password']").fill("pass")
-await page.locator("xpath=//select[@name='languageChoice']").selectOption({label:"English (Indian)"})
-await page.locator("xpath=//button[text()='Login']").click();
-await page.locator("xpath=//div[text()='Patient']").click();
-await page.locator("xpath=//div[text()='New/Search']").click();
+//context  
+const context = await browser.newContext({viewport:{width:1920,height:1032}})
 
-const fillFrame=page.frameLocator("xpath=//iframe[@name='pat']")
+const page = await context.newPage();
+ 
+await page.goto("https://www.salesforce.com/in/sales/free-trial/ee/");
+ 
+// First Name
+await page.locator("css=input[name='firstName']").fill("John");
+ 
+// Last Name
+await page.locator("css=input[name='lastName']").fill("wick");
+ 
+// Email
+await page.locator("css=input[name='email']").fill("john@gmail.com");
+ 
+// Job Title
+await page.locator("css=input[name='jobTitle']").fill("IT Manager");
 
-await fillFrame.locator("xpath=//input[@placeholder='First Name']").fill("Kavi");
-await fillFrame.locator("xpath=//input[@placeholder='Last Name']").fill("Priyaa");
-await fillFrame.locator("xpath=//input[@title='Date of Birth']").fill("2026-09-03");
-await fillFrame.locator("xpath=//select[@title='Birth Sex']").selectOption({label:"Female"});
-await fillFrame.locator("xpath=//button[@name='create']").click();
+//Company
+await page.locator("css=input[name='company']").fill("EY-GDS");
+ 
+
+// Country
+await page.locator("css=select[name='country']").selectOption({ label: "United Kingdom" });
+
+// Employees 
+await page.locator("css=select[name='employees']").selectOption({ label:"100-199 employees"});
+ 
+ 
+// // Checkbox
+// //await page.locator(".checkbox-ui").click();
+// //await page.locator("css=i.checked-icon").click();
+// await page.locator("//xpath=i[@aria-label='check']").click();
+// await page.locator('//input[@type="checkbox"]').check();
+// xpath=//div[text()='Enter a valid phone number']
+await page.locator("css=div[class='checkbox--faux']").check();
+
+// Start Free Trial
+await page.locator("css=button[type='submit']").click();
+ 
+let message1 : string = await page.locator("text=Enter valid phone number.").innerText();
+console.log(message1)
+
+// avoid using nth() 
+// let message2:string = await page.locator("div").filter({hasText:"Enter valid phone number."}).nth(12).innerText();
+// console.log(message2)
+ 
+let message3 : string = await page.getByText("Enter valid phone number.").innerText();
+console.log(message3)
+
+let message4 : string = await page.getByText("valid phone",{exact:false}).innerText();
+console.log(message4)
 
 
-const patientFrame=page.frameLocator("xpath=//iframe[@id='modalframe']")
 
-//below Confirm Create New Patient comes under different frame
-await patientFrame.locator("xpath=//button[text()='Confirm Create New Patient']]").click();
-
-
-
-//handle alert 
-
-
-await page.locator("xpath=//div[@class='closeDlgIframe']]").click();
-
-//another frame - check it
-const result=await page.locator("xpath=//span[contains(text(),'Medical Record Dashboard - Kavi Priyaa']").innerText();
-console.log(result);
-
-await page.waitForTimeout(2000);
-await browser.close()
+await page.waitForTimeout(5000);
+await browser.close();
