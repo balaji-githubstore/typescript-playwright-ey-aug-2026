@@ -11,7 +11,7 @@ await page.goto("https://google.com")
 let linksLocators = await page.locator("xpath=//a")
 
 console.log(await linksLocators.count())
-
+// console.log(await page.locator("xpath=//a").count())
 
 for (let i = 0; i < await linksLocators.count(); i++) {
 
