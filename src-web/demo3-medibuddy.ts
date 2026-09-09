@@ -15,7 +15,7 @@ playwright checks
 - Enabled - yes 
 */
 // await page.setDefaultTimeout(35000)
-await page.locator("xpath=//a[text()='Login11']").click()
+await page.locator("xpath=//a[text()='Login']").click()
 await page.locator("xpath=//div[text()='I have a Corporate Account']").click()
 
 await page.locator("xpath=//a[text()='Login']").click()

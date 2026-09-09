@@ -1,6 +1,7 @@
-import { chromium } from "playwright"
+import { chromium,firefox } from "playwright"
 
-let browser = await chromium.launch({ channel: "chrome", headless: false })
+let browser = await chromium.launch({headless: false })
+// let browser = await firefox.launch({ channel: "firefox", headless: false })
 let context = await browser.newContext()
 let page = await context.newPage()
 
