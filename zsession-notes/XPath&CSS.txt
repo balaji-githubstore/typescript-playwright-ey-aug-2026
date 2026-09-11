@@ -26,28 +26,65 @@ And-or
 //input[@type='file' and @id='edit-field-audited-balance-sheet-for-0-upload']
 
 
+parent-child 
+parent - traves to immediate parent 
+//img[@alt='iLovePDF']/..
+//img[@alt='iLovePDF']/../..
+
+
+child - traves to immediate child
+//table[@id='example']/tbody/tr[1]/td[2]
+//a[@title='iLovePDF']/span/img
+//a[@title='iLovePDF']/span/img[@alt='iLovePDF']
+ 
+
+
+ancestor-descendant
+//img[@alt='iLovePDF']/ancestor::a
+//img[@alt='iLovePDF']/ancestor::a[@title='iLovePDF']
+
+descendant - any child 
+//a[@title='iLovePDF']/descendant::img
+or 
+//a[@title='iLovePDF']//img
+//a[@title='iLovePDF']//img[@alt='iLovePDF']
+//table[@id='DataTables_Table_0']//td[text()='Singapore']
+
+
+following-preceding 
+
+
+following::sibling 
+
+
+
+
+
+
+https://netsafe.hdfc.bank.in/ACSWeb/profilejsp/Password1.jsp
 Example: verify in chrome - ctrl+f
 //input[@id='Form_getForm_FullName']
 //input[@id='Form_getForm_Email']
-
 //select[@id='Form_getForm_Country']
 //button[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']
-
 //button[text()='Allow all']
 //button[normalize-space()='Accept All']
 //input[@placeholder='First Name*']
-
 //input[contains(@placeholder,'First Name')]
-
 //img[@alt='hide-password']
 //img[contains(@src,'hide-password.svg')]
-
-
 //div[contains(text(),'valid username')]
-
-
 //a[text()='Calculate Fee']
 
+(//span[normalize-space()='Visit Our Support Center'])[2]
+//span[normalize-space()='Visit Our Support Center' and @class='subnav-title']
+//td[text()='Singapore']
+
+
+//table[@id='DataTables_Table_0']/tbody/tr[1]/td[1]
+
+Rowcount - //table[@id='example']/tbody/tr
+Column count - //table[@id='example']/tbody/tr[1]/td
 ------------------------------------------------------
 CSS Selector 
 
@@ -57,15 +94,14 @@ tagname[attribute='']
 [attribute='']
 
 
+#id 
+tagname[attribute='']
+
 Example: verify in chrome - ctrl+f
 #authUser
 select[name='languageChoice']
-
-
-
 input[name='firstName']
-
-
+div[class='checkbox--faux']
 
 
 
@@ -87,3 +123,44 @@ page.locator --> {
 <div tabindex="0" ng-if="isPasswordWrong" class="alert alert-danger errorTxt m-0 m-t-10 p-0">Please enter valid username and password</div>
 
 }
+
+
+----
+1. Navigate to https://www.nasscom.in/
+2. Accept cookies if any 
+3. click on Become a member
+3. Select Company as Indian
+4. State as Tamil Nadu
+5. City as Chennai 
+6. Address as anna nagar, Chennai
+7. Please specify your top three areas of interest for engagement with NASSCOM
+ "Co-innovation with Start Ups" 
+  "Engagement on key policy issues"
+8. Enter total employees as 800
+9. Select year as FY 2025 - 26 
+10. Click Calculate Fee
+11. Print alert message and handle alert box 
+12. Upload any pdf file under Memorandum & Article of Association alongwith Certificate of Incorporation
+13. Select both Terms and condition checkbox
+14. Write logic to extract math question and solve it in typescript and enter in the textbox
+15. click submit 
+16. Get and print the Error shown "Company Name Required" 
+
+
+1. Navigate to https://www.citigroup.com/global/about-us/global-presence/india
+2. Accept cookies if any - whenever applicable
+3. Careers --> Search Jobs 
+4. Enter keyword as QA 
+5. Enter location Chennai, Tamil Nadu (you must select from the list) 
+6. click search jobs 
+7. print all the jobs listed there 
+
+
+
+
+
+
+
+
+
+

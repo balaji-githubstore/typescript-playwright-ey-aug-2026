@@ -32,6 +32,7 @@ for (let p = 1; p < 7; p++) {
             p=7;
             break;
         }
+        await page.locator("xpath=//button[@aria-label='Next']").click();
     }
 
 
