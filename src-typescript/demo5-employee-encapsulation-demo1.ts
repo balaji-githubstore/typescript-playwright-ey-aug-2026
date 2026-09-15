@@ -62,3 +62,9 @@ emp2.salary=9000
 
 console.log(emp1.salary)
 console.log(emp2.salary)
+
+
+
+
+
+
