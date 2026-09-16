@@ -27,8 +27,6 @@ class Son extends Father {
         console.log("son style");
 
         super.fatherStyle();
-
-
     }
 }
 
