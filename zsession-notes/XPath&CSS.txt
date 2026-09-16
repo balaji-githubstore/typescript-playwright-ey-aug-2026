@@ -83,6 +83,10 @@ Example: verify in chrome - ctrl+f
 
 //table[@id='DataTables_Table_0']/tbody/tr[1]/td[1]
 
+
+//nav[contains(@class,'menuNav')]//div[text()='Careers']
+
+
 Rowcount - //table[@id='example']/tbody/tr
 Column count - //table[@id='example']/tbody/tr[1]/td
 ------------------------------------------------------
@@ -125,38 +129,33 @@ page.locator --> {
 }
 
 
-----
-1. Navigate to https://www.nasscom.in/
-2. Accept cookies if any 
-3. click on Become a member
-3. Select Company as Indian
-4. State as Tamil Nadu
-5. City as Chennai 
-6. Address as anna nagar, Chennai
-7. Please specify your top three areas of interest for engagement with NASSCOM
- "Co-innovation with Start Ups" 
-  "Engagement on key policy issues"
-8. Enter total employees as 800
-9. Select year as FY 2025 - 26 
-10. Click Calculate Fee
-11. Print alert message and handle alert box 
-12. Upload any pdf file under Memorandum & Article of Association alongwith Certificate of Incorporation
-13. Select both Terms and condition checkbox
-14. Write logic to extract math question and solve it in typescript and enter in the textbox
-15. click submit 
-16. Get and print the Error shown "Company Name Required" 
+------------------------
+
+LoginPage - class 
+	enterUsername(string username)	
+	enterPassword(password)
+	selectLanguageByLabel(language)
+	clickOnLogin()
+	ClickOnAckLicCert()
+	getLoginHeaderLocator()
+	getLoginErrorLocator()
+
+MainPage - class
+	all common element like menu, profile details
+	clickCalendarMenu()
+	ClickMessagesMenu()
+	
+CalendarPage - class
+	validateCalendarHeader()
+	clickOnDay()
+	clickOnWeek()
+	clickOnMonth()
 
 
-1. Navigate to https://www.citigroup.com/global/about-us/global-presence/india
-2. Accept cookies if any - whenever applicable
-3. Careers --> Search Jobs 
-4. Enter keyword as QA 
-5. Enter location Chennai, Tamil Nadu (you must select from the list) 
-6. click search jobs 
-7. print all the jobs listed there 
+AcknowledgmentsLicensingPage - class 
 
 
-
+SearchOrAddPatient - class 	
 
 
 
