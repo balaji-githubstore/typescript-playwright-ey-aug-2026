@@ -1,4 +1,4 @@
-import { validLoginData } from "./demo2-logics2.ts"
+import { validLoginData } from "./demo2-logics2.js"
 // console.log(10=="10")
 
 

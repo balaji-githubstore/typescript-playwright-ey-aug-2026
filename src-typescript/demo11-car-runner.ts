@@ -1,6 +1,6 @@
 // import { areaOfCircle, areaOfSquare } from "./demo2-methods.ts"
-import { Car } from "./demo10-car-day7-task3.ts"
-import { Employee } from "./demo4-employee-type.ts"
+import { Car } from "./demo10-car-day7-task3.js"
+import { Employee } from "./demo4-employee-type.js"
 
 
 let car1: Car = new Car("TN01AB1234", "Swift", "White", 750000, 50);

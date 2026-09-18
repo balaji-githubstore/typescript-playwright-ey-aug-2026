@@ -159,7 +159,14 @@ SearchOrAddPatient - class
 
 
 
+API automation - 
+baseurl+resource 
 
+baseurl - https://petstore.swagger.io/v2/
+find pet by id - /pet/5
+
+
+endpoint - http get - https://petstore.swagger.io/v2/pet/5
 
 
 
