@@ -1,0 +1,38 @@
+{
+    "newPet": {
+        "id": 677,
+        "category": {
+            "id": 0,
+            "name": "string"
+        },
+        "name": "doggie677",
+        "photoUrls": [
+            "string"
+        ],
+        "tags": [
+            {
+                "id": 0,
+                "name": "string"
+            }
+        ],
+        "status": "available"
+    },
+    "updatePet": {
+        "id": 677,
+        "category": {
+            "id": 0,
+            "name": "string"
+        },
+        "name": "doggie677677677677",
+        "photoUrls": [
+            "string"
+        ],
+        "tags": [
+            {
+                "id": 0,
+                "name": "string"
+            }
+        ],
+        "status": "available"
+    }
+}
