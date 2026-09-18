@@ -8,8 +8,8 @@ console.log(response.status())
 
 const jsonBody=await response.json();
 console.log(jsonBody)
-console.log(jsonBody.message)
 
+console.log(jsonBody.message)
 
 assert.deepStrictEqual(response.status(),404)
 assert.deepStrictEqual(jsonBody.message,"Pet not found")
