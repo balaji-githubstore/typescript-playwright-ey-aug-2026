@@ -1,7 +1,7 @@
 import { chromium } from "playwright"
 
 //using playwright instance - getting Browser instance 
-let browser=await chromium.launch({channel:"chrome"})
+let browser=await chromium.launch({channel:"chrome",headless:false})
 let browserEdge=await chromium.launch()
 // getting BrowserContext instance 
 let context=await browser.newContext()
